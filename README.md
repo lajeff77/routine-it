@@ -1,5 +1,5 @@
 # Routine It 😎
-Routine It is a web app that helps you create and maintain different versions of a daily routine.
+Routine It is a web app that helps you create and maintain a tiered daily routine. Depending on how you feel, Routine It will proivde a different list that suits your energy levels for the day.
 
 ## Insipiration 💡
 A neurodivergent youtuber named Haley Honeyman devised a method to organized her mornings and stick to a routine called the [Honeyman method](https://youtu.be/JQFZNQS6eQ0?si=k0zWNBbNA2oAt4at).
