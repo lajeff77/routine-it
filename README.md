@@ -1,7 +1,7 @@
-# Routine It
+# Routine It 😎
 Routine It is a web app that helps you create and maintain different versions of a daily routine.
 
-## Insipiration
+## Insipiration 💡
 A neurodivergent youtuber named Haley Honeyman devised a method to organized her mornings and stick to a routine called the [Honeyman method](https://youtu.be/JQFZNQS6eQ0?si=k0zWNBbNA2oAt4at).
 
 For neurodivergent induviduals, partically those who are comorbid with both ADHD and Autism, sticking to a routine can be crucial to quality of life but difficult to keep up with. Autism is a condition that craves and thrives with a routine but ADHD can interfere with continually keeping up with a routine for more than a few days.
@@ -24,7 +24,7 @@ Example from video:
 
 You can learn more about the Honeyman method from [Haley's youtube video](https://youtu.be/JQFZNQS6eQ0?si=k0zWNBbNA2oAt4at).
 
-## Goals and Objectives
+## Goals and Objectives 📈
 
 ### The Problem with Routines for Me 🫤
 
@@ -42,28 +42,28 @@ This app is design specifically for those with neurotypes, mental conditions, or
 
 However anyone who benefits from this design is allowed to use it!
 
-### Objectives
+### Objectives ✅
 1. Provide a user-friendly webapp implementation of the Honeyman method.
 2. Improve routine adherence and wellbeing for neurodivergent induviduals.
 3. Mainatian and engage a user base.
 
-### Successs Metrics
+### Successs Metrics 🙌
 1. Have 80% adherence to routines across all users.
 2. Have at least on user engaged for 30 days adherring to thier routine.
 
-### Key Features
+### Key Features 🔑
 1. Secure authentication and private personalized routines
 2. Survey to create 3 tiered routine
 3. Notification reminders
 4. Checkable lists
 5. Dashboard for routine adherance analytics
 
-### Ethical and Inclusive Desgin
+### Ethical and Inclusive Desgin 🤓
 1. Ensure privacy and securtiy for all users
 2. Accessibility features to accomodate differing ability sets
 3. Feedback from neurodiverse users to address needs and preferences
 
-### Routine It and My Goals
+### Routine It and My Goals 🥅
 Since I learend to code at such a young age, I always knew I could have an impact on the world. The phrase "I will change the world through code" has echoed in my brain for years. Statring this project of Routine It, I can change the world, to design something that is inclusive, user-centric, and sees a group of people who have been unseen for centuries. The world has failed time after time to give neurodivergent people the tools to keep up with neurotypicals. I want neurodivergent people to have a better life and a fighting chance to get to where we want to go. I'm listening to Ghandi and I'm going be the change I wish to see in the world.
 
 
