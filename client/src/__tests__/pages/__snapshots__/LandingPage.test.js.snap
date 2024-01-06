@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage LandingPage matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      id="main-header"
+    >
+      <a
+        class="header-logo"
+        href="/"
+      >
+        <h1>
+          Routine It
+        </h1>
+      </a>
+      <a
+        class="header-link"
+        href="/"
+      >
+        <p>
+          Home
+        </p>
+      </a>
+      <a
+        class="header-link"
+        href="/signup"
+      >
+        <p>
+          Sign Up
+        </p>
+      </a>
+      <a
+        class="header-link"
+        href="/signin"
+      >
+        <p>
+          Sign In
+        </p>
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,9 +1,12 @@
 import React from 'react';
+import MainHeader from '../components/MainHeader';
 
 const SignInPage = () => {
 
     return (
-        <div></div>
+        <div>
+            <MainHeader />
+        </div>
     )
 }
 
