@@ -39,6 +39,20 @@ exports[`MainHeader MainHeader matches snapshot 1`] = `
         </p>
       </a>
     </div>
+    <div
+      class="hero-section"
+    >
+      <h1>
+        Everyone should be able to keep a routine!
+      </h1>
+      <a
+        href="/signup"
+      >
+        <button>
+          Get Started!
+        </button>
+      </a>
+    </div>
   </div>
 </DocumentFragment>
 `;
