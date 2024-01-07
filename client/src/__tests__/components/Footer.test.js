@@ -4,10 +4,10 @@ import { MemoryRouter, Route, Routes } from "react-router-dom";
 import LandingPage from '../../pages/LandingPage';
 import AccountCreationPage from '../../pages/AccountCreationPage';
 import SignInPage from "../../pages/SignInPage";
-import SummarySection from "../../components/SummarySection";
+import Footer from "../../components/Footer";
 
-describe(SummarySection.name, ()=>{
-    test('SummarySection matches snapshot', () => {
+describe(Footer.name, ()=>{
+    test('Footer matches snapshot', () => {
         const { asFragment } = render(
           <MemoryRouter>
             <Routes>

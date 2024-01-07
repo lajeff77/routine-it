@@ -91,3 +91,12 @@ body{
 .summary-section a, a:visited, a:active, a:hover {
     color:#f0ebd8;
 }
+
+/* Footer Styling */
+footer {
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    background-color: #1c77c3;
+    color:#f0ebd8;
+}
