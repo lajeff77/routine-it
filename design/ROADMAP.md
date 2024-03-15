@@ -138,3 +138,7 @@ A page which the user can change the settings in their account. They must enter 
 ### Other Details
 Part of MVP: Yes
 Requires authorization: Yes
+
+
+## To Do
+- add code cov bot

@@ -1,7 +1,7 @@
 # Routine It 😎
 Routine It is a web app that helps you create and maintain a tiered daily routine. Depending on how you feel, Routine It will provide a different list that suits your energy levels for the day.
 
-## Insipiration 💡
+## Inspiration 💡
 A neurodivergent youtuber named Haley Honeyman devised a method to organized her mornings and stick to a routine called the [Honeyman method](https://youtu.be/JQFZNQS6eQ0?si=k0zWNBbNA2oAt4at).
 
 For neurodivergent individuals, particularly those who are co-morbid with both ADHD and Autism, sticking to a routine can be crucial to quality of life but difficult to keep up with. Autism is a condition that craves and thrives with a routine but ADHD can interfere with continually keeping up with a routine for more than a few days.
@@ -47,7 +47,7 @@ However anyone who benefits from this design is allowed to use it!
 2. Improve routine adherence and wellbeing for neurodivergent individuals.
 3. Maintain and engage a user base.
 
-### Successs Metrics 🙌
+### Success Metrics 🙌
 1. Have 80% adherence to routines across all users.
 2. Have at least on user engaged for 30 days adhering to their routine.
 
