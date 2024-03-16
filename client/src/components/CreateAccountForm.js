@@ -11,8 +11,8 @@ const CreateAccountForm = () => {
 
     return (
     <div>
-        <body id='create-account'>
-         <form id='create-account-form' onSubmit={handleSubmit}>
+        <body className='form-body'>
+         <form className='login-signin-form' onSubmit={handleSubmit}>
                 <h2>Sign up for Routine It</h2>
                 <p>Already have an account? Login <Link to="/signin" className="regular-link">here</Link>.</p>
                 <div id="create-account-form-inputs">
