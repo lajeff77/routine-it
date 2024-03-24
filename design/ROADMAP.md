@@ -32,6 +32,8 @@ A page which introduces the website of routine it and allows users to log in or 
 Part of MVP: Yes
 Requires authorization: Yes
 
+- should I include FAQ and how it works on landing page?
+
 ## Account Creation Page
 
 ### Summary

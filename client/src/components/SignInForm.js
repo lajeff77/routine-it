@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import {Link, Navigate} from 'react-router-dom';
 
 const SignInForm = () => {
 
@@ -7,6 +7,7 @@ const SignInForm = () => {
         e.preventDefault();
         /*TODO: call account login api here */
         console.log("Signed in account");
+        <Navigate to="/mydashboard" />
     }
 
     return(

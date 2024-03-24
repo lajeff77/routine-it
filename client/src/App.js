@@ -7,6 +7,7 @@ import {
 import LandingPage from './pages/LandingPage';
 import AccountCreationPage from './pages/AccountCreationPage'
 import SignInPage from './pages/SignInPage'
+import MyDashboardPage from './pages/MyDashboardPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route element={<LandingPage />} path="/" />
           <Route element={<AccountCreationPage />} path="/signup" />
           <Route element={<SignInPage />} path="/signin" />
+          <Route element={<MyDashboardPage/>} path="/mydashboard" />
         </Routes>
       </Router>
     </div>
