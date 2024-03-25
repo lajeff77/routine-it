@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardHeader DashboardHeader matches snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <div
+      class="MuiBox-root css-0"
+    >
+      <h1
+        class="MuiTypography-root MuiTypography-h1 css-c6zhjt-MuiTypography-root"
+      >
+        My Dashboard
+      </h1>
+    </div>
+  </div>
+</div>
+`;

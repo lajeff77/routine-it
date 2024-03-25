@@ -1,13 +1,16 @@
 import React from "react";
-// import DashboardHeader from "../components/DashboardHeader";
+import Dashboard from "../components/Dashboard";
 import PermanentSideDrawer from "../components/PermanentSideDrawer";
+import {Grid, Item} from '@mui/material';
 
 const MyDashboardPage = () => {
 
     return (
         <div>
-            <PermanentSideDrawer />
-            {/* <DashboardHeader /> */}
+            <Grid container rowSpacing={2} >
+                <Grid item xs={2}><PermanentSideDrawer /></Grid>
+                <Grid item xs={10}><Dashboard /></Grid>
+            </Grid>
         </div>
     )
 }
