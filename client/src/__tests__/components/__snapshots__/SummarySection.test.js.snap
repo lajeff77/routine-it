@@ -84,11 +84,19 @@ exports[`SummarySection SummarySection matches snapshot 1`] = `
         My vision for Routine It is to create an easy to use interface to allow myself and others to create tiered routine systems that work for them. Too many things in this world are made without neurodiverse people in mind. It's time for a routine planner for us by us.
       </p>
     </div>
-    <footer>
-      <p>
-        Routine It © 2024
-      </p>
-    </footer>
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionSticky css-1fz1qzk-MuiPaper-root-MuiAppBar-root"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+        >
+          Routine It © 2024
+        </p>
+      </div>
+    </header>
   </div>
 </DocumentFragment>
 `;

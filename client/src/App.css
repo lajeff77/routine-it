@@ -147,12 +147,3 @@ label {
     text-align: center;
     font-size: 16px;
   }
-
-/* Footer Styling */
-footer {
-    padding: 1%;
-    display: flex;
-    justify-content: center;
-    background-color: #1c77c3;
-    color:#f0ebd8;
-}

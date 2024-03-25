@@ -1,10 +1,15 @@
-import react from 'react';
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 
 const Footer = () => {
     return (
-        <footer>
-            <p>Routine It &copy; 2024</p>
-        </footer>
+        <AppBar position="sticky" color="primary" sx={{alignItems: "center"}}>
+            <Toolbar>
+                <Typography variant="body1">Routine It &copy; 2024</Typography>
+            </Toolbar>
+        </AppBar>
     )
 }
 
