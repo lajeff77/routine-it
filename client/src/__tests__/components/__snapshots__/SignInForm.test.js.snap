@@ -4,13 +4,13 @@ exports[`SignInForm SignInForm matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <header
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-1b3qxrb-MuiPaper-root-MuiAppBar-root"
     >
       <div
         class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
       >
         <div
-          class="MuiTypography-root MuiTypography-h6 css-1juivf6-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 css-snohim-MuiTypography-root"
         >
           Routine It
         </div>
@@ -61,33 +61,49 @@ exports[`SignInForm SignInForm matches snapshot 1`] = `
       </a>
     </div>
     <div
-      class="summary-section"
+      class="MuiBox-root css-1i0ehy0"
     >
-      <h1>
+      <h1
+        class="MuiTypography-root MuiTypography-h1 css-o2w69a-MuiTypography-root"
+      >
         Traditional Routines Don't Work for Everyone.
       </h1>
-      <p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-1gvvk8k-MuiTypography-root"
+      >
         As someone co-morbid with ADHD and Autism, I've never been able to keep a routine despite desperately needing one. I have a pattern. I see some motivational video or social media post about getting into a routine and getting my life on track. I've got boundless levels of energy and my meter is full. I think of one routine with a laundry list of tasks to do every single morning. I make it through the list for one day, two if I'm lucky. And then on the third day, I wake up with 50% energy in my meter. I maybe complete a few items, but I feel discouraged because I can't live up to my own expectations that I set when I had 100% energy. I'm disappointed in myself that I messed up so quick, and I abandon my list altogether.
       </p>
-      <p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-1gvvk8k-MuiTypography-root"
+      >
         I've lived this cycle so many times, I ditched routines all together. I leaned on chaos and lack of structure, taking one day at a time. But I started feeling frustrated with that too. I lost velocity in my life, shifting wherever the wind (AKA my ADHD brain) takes every single day. Some things would go forgotten and get swept under the rug. My constant need for adjustment demolished my sense of direction. My autistic brain, who needs a clear path forward to achieve even the littlest of feats was lost.
       </p>
-      <p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-1gvvk8k-MuiTypography-root"
+      >
         When you get lost, a compass can help guide you back to a path home (or maybe more realistically Google Maps in this day and age). I recently found my compass on YouTube, from a video titled 
         <a
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1xylxj1-MuiTypography-root-MuiLink-root"
           href="https://www.youtube.com/watch?v=JQFZNQS6eQ0&ab_channel=HayleyHoneyman"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Routines for ADHD that ACTUALLY WORK! 🌛☀️ (Morning/Night routines)
         </a>
         . In this video, a girl named Haley who has an 
         <a
+          class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1xylxj1-MuiTypography-root-MuiLink-root"
           href="https://www.neurodiversecouplescounseling.com/audhd"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           AuDHD neurotype
         </a>
          like myself, explains her personal system (The Honeyman Method) for creating a routine that caters to both the variability of your energy when you have ADHD, and the need for structure when you have Autism. The system creates three tiers of your routine in order to allow yourself the grace to not stick to your most perfect ideal routine by having additional 2 scaled back routines for when you have an average energy day and a low energy day. I absolutely loved this idea and wanted to try it out thus Routine It was born, in order to organize and craft these routines.
       </p>
-      <p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-1gvvk8k-MuiTypography-root"
+      >
         My vision for Routine It is to create an easy to use interface to allow myself and others to create tiered routine systems that work for them. Too many things in this world are made without neurodiverse people in mind. It's time for a routine planner for us by us.
       </p>
     </div>
