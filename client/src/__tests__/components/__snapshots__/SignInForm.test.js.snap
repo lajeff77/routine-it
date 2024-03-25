@@ -3,42 +3,49 @@
 exports[`SignInForm SignInForm matches snapshot 1`] = `
 <DocumentFragment>
   <div>
-    <div
-      id="main-header"
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic css-hip9hq-MuiPaper-root-MuiAppBar-root"
     >
-      <a
-        class="header-logo"
-        href="/"
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-hyum1k-MuiToolbar-root"
       >
-        <h1>
+        <div
+          class="MuiTypography-root MuiTypography-h6 css-1juivf6-MuiTypography-root"
+        >
           Routine It
-        </h1>
-      </a>
-      <a
-        class="header-link"
-        href="/"
-      >
-        <p>
+        </div>
+        <a
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-jv9d4y-MuiButtonBase-root-MuiButton-root"
+          href="/"
+          tabindex="0"
+        >
           Home
-        </p>
-      </a>
-      <a
-        class="header-link"
-        href="/signup"
-      >
-        <p>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-jv9d4y-MuiButtonBase-root-MuiButton-root"
+          href="/signup"
+          tabindex="0"
+        >
           Sign Up
-        </p>
-      </a>
-      <a
-        class="header-link"
-        href="/signin"
-      >
-        <p>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-jv9d4y-MuiButtonBase-root-MuiButton-root"
+          href="/signin"
+          tabindex="0"
+        >
           Sign In
-        </p>
-      </a>
-    </div>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+    </header>
     <div
       class="hero-section"
     >

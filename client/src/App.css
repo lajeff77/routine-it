@@ -3,50 +3,6 @@ body{
     padding: 0;
 }
 
-/* Main Header Styling*/
-#main-header {
-    background-color: #39A9DB;
-    display: flex;
-    flex-direction: row;
-    padding: 1%;
-}
-
-.header-logo, .header-logo:active, .header-logo:hover, .header-logo:visited{
-    color:#f0ebd8;
-    text-decoration: none;
-    padding: 1%;
-    padding-left: 3%;
-}
-
-.header-link{
-    color: #f0ebd8;
-    text-decoration: none;
-    justify-content: center;
-    padding: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin: 1%;
-    border-radius: 5%;
-    font-size: 20px;
-  }
-
-.header-link:visited {
-    color: #f0ebd8;
-    text-decoration: none;
-}
-
-.header-link:hover {
-    background-color: #f0ebd8;
-    color: #1c77c3;
-    text-decoration: none;
-}
-
-.header-link:active  {
-    background-color: #1c77c3;;
-    color: #f0ebd8;
-    text-decoration: none;
-}
-
 /* Hero Section Styling */
 .hero-section{
     display: flex;
