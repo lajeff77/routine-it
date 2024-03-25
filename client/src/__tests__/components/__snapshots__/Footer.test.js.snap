@@ -47,17 +47,22 @@ exports[`Footer Footer matches snapshot 1`] = `
       </div>
     </header>
     <div
-      class="hero-section"
+      class="MuiBox-root css-66os1a"
     >
-      <h1>
+      <h1
+        class="MuiTypography-root MuiTypography-h1 css-1q53ye7-MuiTypography-root"
+      >
         Everyone should be able to keep a routine!
       </h1>
       <a
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-jv9d4y-MuiButtonBase-root-MuiButton-root"
         href="/signup"
+        tabindex="0"
       >
-        <button>
-          Get Started!
-        </button>
+        Get Started!
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
       </a>
     </div>
     <div

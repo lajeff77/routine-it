@@ -3,37 +3,6 @@ body{
     padding: 0;
 }
 
-/* Hero Section Styling */
-.hero-section{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-    padding-top: 200px;
-    padding-bottom: 500px;
-    background-color: #d1d2d4;
-    background-image: url('/public/bathroom-counter-medium.jpg');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-    height: 100%;
-}
-
-.hero-section h1 {
-    color:#1c77c3;
-}
-
-.hero-section button {
-    color:#f0ebd8;
-    background-color: #39A9DB;
-    border: none;
-    border-radius: 5%;
-    font-size: 20px;
-    margin: 1%;
-    padding: 2%;
-}
-
-
 /* Create Account Form Styling */
 .form-body{
     background-color: #f0ebd8;
