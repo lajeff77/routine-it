@@ -7,7 +7,6 @@ const AccountCreationPage = () => {
 
     return (
         <div>
-            <MainHeader />
             <CreateAccountForm />
             <Footer />
         </div>
