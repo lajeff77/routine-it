@@ -1,9 +1,13 @@
 import React from 'react';
 import DashboardHeader from './DashboardHeader';
+import RoutineList from './RoutineList';
 
 const Dashboard = () => {
     return (
-        <DashboardHeader />
+        <div>
+            <DashboardHeader />
+            <RoutineList />
+        </div>
     )
 }
 

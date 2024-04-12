@@ -7,7 +7,7 @@ const DashboardHeader =  () => {
         <div>
             <Box>
                 <Box>
-                    <Typography variant="h1" sx={{textAlign: 'center', margin: '10px'}}>My Dashboard</Typography>
+                    <Typography variant="h1" sx={{textAlign: 'center', margin: '30px'}}>My Dashboard</Typography>
                 </Box>
             </Box>
         </div>

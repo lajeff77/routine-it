@@ -9,7 +9,7 @@ exports[`DashboardHeader DashboardHeader matches snapshot 1`] = `
       class="MuiBox-root css-0"
     >
       <h1
-        class="MuiTypography-root MuiTypography-h1 css-c6zhjt-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h1 css-3ns5jg-MuiTypography-root"
       >
         My Dashboard
       </h1>
