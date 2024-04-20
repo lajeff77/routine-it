@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Button, LinearProgress, ListItem, ListItemText, Typography} from '@mui/material';
+import {Box, Button, LinearProgress, ListItem, Typography} from '@mui/material';
 
 const Routine = (props) =>{
     let label = determineLabel(props.progress);

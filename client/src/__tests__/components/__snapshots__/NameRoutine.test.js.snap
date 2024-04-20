@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NameRoutine NameRoutine matches snapshot 1`] = `
+<div
+  class="MuiBox-root css-2u9sdq"
+>
+  <h1
+    class="MuiTypography-root MuiTypography-h1 css-3ns5jg-MuiTypography-root"
+  >
+    Let's Make a New Routine!
+  </h1>
+  <div
+    class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root css-1yf7ndb-MuiPaper-root-MuiCard-root"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-altc5y-MuiTypography-root"
+    >
+      We'll start with a name for this routine:
+    </p>
+    <div
+      class="MuiFormControl-root MuiTextField-root css-166k1z2-MuiFormControl-root-MuiTextField-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for="outlined-required"
+        id="outlined-required-label"
+      >
+        Enter a name
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+          id="outlined-required"
+          required=""
+          type="text"
+          value="New Routine"
+        />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-14lo706"
+          >
+            <span>
+              Enter a name
+               
+              *
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+`;
