@@ -44,7 +44,7 @@ exports[`NameRoutine NameRoutine matches snapshot 1`] = `
           id="outlined-required"
           required=""
           type="text"
-          value="New Routine"
+          value="My Routine"
         />
         <fieldset
           aria-hidden="true"

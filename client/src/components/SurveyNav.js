@@ -12,8 +12,10 @@ const SurveyNav = ({props}) => {
     }
 
     const goNext = () => {
-        if(props.index <= props.maxIndex)
+        if(props.index <= props.maxIndex){
            props.setIndex(props.index + 1);
+           props.setReadyForNext(false); 
+        }
     }
 
     const finish = () => { 
@@ -22,9 +24,9 @@ const SurveyNav = ({props}) => {
     }
 
     return(
-        <Box display="flex" flexDirection="row" justifyContent="center" sx={{marigin:'50px', padding:'10px'}}>
+        <Box display="flex" flexDirection="row" justifyContent="center" sx={{margin:'50px', padding:'10px'}}>
             <Button disabled={props.index === 0} variant="contained" onClick={goPrev} sx={{width:"100px", margin:"10px", padding:"10px"}}>Previous</Button>
-            <Button  variant="contained" onClick={props.index === props.maxIndex? finish: goNext} sx={{width:"100px",  margin:"10px", padding:"10px"}}>{props.index === props.maxIndex? "Finish": "Next"}</Button>
+            <Button disabled={!props.readyForNext} variant="contained" onClick={props.index === props.maxIndex? finish: goNext} sx={{width:"100px",  margin:"10px", padding:"10px"}}>{props.index === props.maxIndex? "Finish": "Next"}</Button>
         </Box>
     );
 }

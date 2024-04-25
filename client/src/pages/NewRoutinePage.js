@@ -2,15 +2,26 @@ import React, {useState} from 'react';
 import {Box} from '@mui/material';
 import NameRoutine from '../components/NameRoutine';
 import SurveyNav from '../components/SurveyNav';
+import AddTasksToRoutine from '../components/AddTasksToRoutine';
 
 const NewRoutinePage = () => {
     const [index,setIndex] = useState(0);
-    const survey =[<NameRoutine/>];
+    const [routineName, setRoutineName] = useState("");
+    const [routineItems, setRoutineItems] = useState([]);
+    const [readyForNext, setReadyForNext] = useState(false);
+
+    const getRoutineName = () => {
+        return routineName;
+    }
+    const survey = [
+        <NameRoutine props={{setRoutineName: setRoutineName, setReadyForNext:setReadyForNext}}/>,
+        <AddTasksToRoutine props={{getRoutineName:getRoutineName,  setReadyForNext:setReadyForNext, setRoutineItems: setRoutineItems, routineItems: routineItems}}/>
+    ];
 
     return(
         <Box>
             {survey[index]}
-            <SurveyNav props={{setIndex:setIndex, index:index, maxIndex:survey.length-1}}/>
+            <SurveyNav props={{setIndex:setIndex, setReadyForNext:setReadyForNext, index:index, maxIndex:survey.length-1, readyForNext: readyForNext}}/>
         </Box>
     );
 }
