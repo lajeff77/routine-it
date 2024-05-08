@@ -11,16 +11,31 @@ const steps = [ 'Name Routine', 'Add Tasks'] //, 'Ideal Routine', 'Average Routi
 const NewRoutinePage = () => {
     const navigate = useNavigate();
     const [activeStep, setActiveStep] = useState(0);
+
     const handleBack = () => {
         setActiveStep((prevStep) => prevStep - 1);
     }
 
     const handleSubmit = () => {
+        console.log('handling the submit');
         if(activeStep === steps.length - 1){
             //TODO: call api to create new routine here
+            console.log("Submitting ...");
+            console.log(`name is ${formik.values.name} \n tasks is ${formik.values.tasks}`)
             navigate("/myDashboard");
         }else{
             setActiveStep((prevStep) => prevStep + 1);
+        }
+    }
+
+    const canGoNext = (step) => {
+        switch(step){
+            case 0:
+                return formik.errors.name
+            case 1:
+                return formik.errors.tasks
+            default:
+                return false
         }
     }
 
@@ -38,7 +53,7 @@ const NewRoutinePage = () => {
             .required('Please name your routine.'),
             tasks: Yup.array()
             .required('Please add tasks to your routine.')
-            .min(1),
+            .min(1, 'Please add more than one task to your routine'),
             // idealRoutine: Yup.array()
             // .required('Please select tasks to your ideal routine.')
             // .min(1),
@@ -97,10 +112,10 @@ const NewRoutinePage = () => {
                         Back
                     </Button>
                     {activeStep === steps.length -1 ? (
-                        <Button onClick={handleSubmit} variant="contained" sx={{width:"100px", margin:"10px", padding:"10px"}}>
+                        <Button disabled={canGoNext(activeStep)} onClick={handleSubmit} variant="contained" sx={{width:"100px", margin:"10px", padding:"10px"}}>
                             Submit
                         </Button> ) : (
-                        <Button onClick={handleSubmit} variant="contained" sx={{width:"100px", margin:"10px", padding:"10px"}}>
+                        <Button disabled={canGoNext(activeStep)} onClick={handleSubmit} variant="contained" sx={{width:"100px", margin:"10px", padding:"10px"}}>
                             Next
                         </Button>)}
                 </Grid>

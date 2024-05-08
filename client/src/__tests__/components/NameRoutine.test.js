@@ -13,6 +13,7 @@ const mockFormik = {
     },
     errors: {},
     touched: {},
+    validateForm: jest.fn(),
     handleChange: jest.fn(),
     handleSubmit: jest.fn(),
 };

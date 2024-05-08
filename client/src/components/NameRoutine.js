@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Box, Card, TextField, Typography} from '@mui/material';
 
 const NameRoutine = ({props}) => {
     //TODO: validate that the name isn't a duplicate
     let formik = props.formik;
+
+    useEffect(() => {
+        formik.validateForm();
+    }, [])
 
     const handleKeyPress = (e) => {
         if(e.key === 'Enter')
