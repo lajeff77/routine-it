@@ -1,38 +1,64 @@
 import React, {useState} from "react";
-import {Box, Button, Card, TextField, Typography} from '@mui/material';
-import TaskList from './TaskList';
+import {Field, FieldArray, FormikProvider} from 'formik';
+import {Box, Button, Card, IconButton, ListItem, Divider, TextField, Typography} from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 
 const AddTasksToRoutine = ({props}) => {
+    let formik = props.formik;
 
-    const [item,setItem] = useState("");
+    const[item,setItem] = useState('');
 
     const handleChange = (e) => {
         setItem(e.target.value);
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        props.routineItems.push(item);
-        setItem("");
-        if(props.routineItems.length > 0)
-            props.setReadyForNext(true);
-        else
-            props.setReadyForNext(false);
+    const setTaskList = () =>{
+        const newTaskList = [
+            ...formik.values.tasks, item
+          ];
+          formik.setFieldValue("tasks", newTaskList);
+          setItem('');
+    }
+
+    const handleKeyPress = (e) => {
+        if(e.key === 'Enter')
+        {
+            e.preventDefault();
+            setTaskList();
+        }
     }
 
     return(
+    <FormikProvider value={formik}>
         <Box sx={{margin:"20px", display:"flex", flexDirection:"column", alignItems:"center"}}>
-            <Typography variant="h1" sx={{textAlign: 'center', margin: '30px'}}>Let's add some tasks to {props.getRoutineName()}.</Typography>
+            <Typography variant="h1" sx={{textAlign: 'center', margin: '30px'}}>Let's add some tasks to {formik.values.name}.</Typography>
             <Card variant="outlined" sx={{align:"center", width:"70%", display:"flex", flexDirection:"column", outline:"2px"}}>
-                <Typography variant="body1"  sx={{margin: '20px'}}>Don't hold back! What is everything you ideally want to accomplish with {props.getRoutineName()}?</Typography>
-                <Box component="form" onSubmit={handleSubmit} sx={{margin:"20px", display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
-                    <TextField required value={item} onChange={handleChange} id="outlined-required" label="Enter a new task" variant="outlined" sx={{margin: '20px'}}/>
-                    <Button variant="contained" type="submit" sx={{width:"100px", margin:"10px", padding:"10px"}}>Add</Button>
+                <Typography variant="body1"  sx={{margin: '20px'}}>Don't hold back! What is everything you ideally want to accomplish with {formik.values.name}?</Typography>
+                <Box component="form" sx={{margin:"20px", display:"flex", flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
+                    <TextField required value={item} onChange={handleChange} id="outlined-required" label="Enter a new task" variant="outlined" sx={{margin: '20px'}} onKeyDown={handleKeyPress}/>
+                    <Button variant="contained" onClick={setTaskList} sx={{width:"100px", margin:"10px", padding:"10px"}}>Add</Button>
                 </Box> 
-                <TaskList props={{list: props.routineItems, setList: props.setRoutineItems}}/>
+                <Box>
+                <FieldArray name="tasks" sx={{display:'flex', flexDirection:'column'}}render={(arrayHelpers) => (
+                    formik.values.tasks.map((task, index) => (
+                        <Box key={index} sx={{width: "100%"}}>
+                            <Divider/>
+                            <ListItem >
+                                <Typography variant="body1">{task}</Typography>
+                                <IconButton edge="end" aria-label="delete" onClick={() => arrayHelpers.remove(index)}>
+                                    <DeleteIcon />
+                                </IconButton>
+                            </ListItem> 
+                        </Box>))
+                    )}
+                />
+            </Box>
             </Card>
+            
         </Box>
+        </FormikProvider>
     )
 }
 
