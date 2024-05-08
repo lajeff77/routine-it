@@ -3,11 +3,24 @@ import {expect, test} from '@jest/globals';
 import React from "react";
 import AddTasksToRoutine from "../../components/AddTasksToRoutine";
 
+const mockFormik = {
+    values: {
+        name: '',
+        tasks: [],
+        // idealRoutine: [],
+        // averageRoutine: [],
+        // survivalRoutine: []
+    },
+    errors: {},
+    touched: {},
+    handleChange: jest.fn(),
+    handleSubmit: jest.fn(),
+};
 
-const testProps  = {
-    getRoutineName: () => {return "My Routine"},
-    routineItems: ["Eat breakfast", "Walk dog", "Clean dishes", "Shower"]
-}
+const testProps = {
+    formik: mockFormik,
+    
+};
 
 describe(AddTasksToRoutine.name, ()=>{
     test('AddTasksToRoutine matches snapshot', () => {

@@ -3,9 +3,24 @@ import {expect, test} from '@jest/globals';
 import React from "react";
 import NameRoutine from "../../components/NameRoutine";
 
+const mockFormik = {
+    values: {
+        name: '',
+        tasks: [],
+        // idealRoutine: [],
+        // averageRoutine: [],
+        // survivalRoutine: []
+    },
+    errors: {},
+    touched: {},
+    handleChange: jest.fn(),
+    handleSubmit: jest.fn(),
+};
+
 const testProps = {
-    routineName: "My Routine"
-}
+    formik: mockFormik,
+    handleSubmit: jest.fn()
+};
 
 describe(NameRoutine.name, ()=>{
     test('NameRoutine matches snapshot', () => {
