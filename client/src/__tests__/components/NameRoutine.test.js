@@ -7,9 +7,9 @@ const mockFormik = {
     values: {
         name: '',
         tasks: [],
-        // idealRoutine: [],
-        // averageRoutine: [],
-        // survivalRoutine: []
+        idealRoutine: [],
+        averageRoutine: [],
+        survivalRoutine: []
     },
     errors: {},
     touched: {},

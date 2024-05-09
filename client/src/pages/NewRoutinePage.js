@@ -5,8 +5,22 @@ import * as Yup from 'yup';
 import {Box, Stepper, Step, StepLabel, Grid, FormHelperText, Button} from '@mui/material';
 import NameRoutine from '../components/NameRoutine';
 import AddTasksToRoutine from '../components/AddTasksToRoutine';
+import SelectRequiredTasks from '../components/SelectRequiredTasks';
 
-const steps = [ 'Name Routine', 'Add Tasks'] //, 'Ideal Routine', 'Average Routine', 'Survival Routine']
+const steps = [ 'Name Routine', 'Add Tasks', 'Configure Ideal Routine', 'Configure Average Routine', 'Configure Survival Routine']
+
+const idealText = {
+    title: "What tasks can you see yourself doing on an ideal day?",
+    prompt: "Select the tasks that you hope to achieve on your best days.",
+}
+const averageText = {
+    title: "What tasks can you see yourself doing on an average day?",
+    prompt: "Select the tasks that you hope to achieve on most days.",
+}
+const survivalText = {
+    title: "What tasks do you need to do in order to survive?",
+    prompt: "Please only select the tasks that you expect yourself to do at the bare minimum.",
+}
 
 const NewRoutinePage = () => {
     const navigate = useNavigate();
@@ -17,11 +31,9 @@ const NewRoutinePage = () => {
     }
 
     const handleSubmit = () => {
-        console.log('handling the submit');
         if(activeStep === steps.length - 1){
             //TODO: call api to create new routine here
-            console.log("Submitting ...");
-            console.log(`name is ${formik.values.name} \n tasks is ${formik.values.tasks}`)
+            // console.log(`name is ${formik.values.name} \n tasks is ${formik.values.tasks}\n idealRoutine is ${formik.values.idealRoutine}\n averageRoutine is ${formik.values.averageRoutine}\n survivalRoutine is ${formik.values.survivalRoutine}`)
             navigate("/myDashboard");
         }else{
             setActiveStep((prevStep) => prevStep + 1);
@@ -31,11 +43,17 @@ const NewRoutinePage = () => {
     const canGoNext = (step) => {
         switch(step){
             case 0:
-                return formik.errors.name
+                return formik.errors.name;
             case 1:
-                return formik.errors.tasks
+                return formik.errors.tasks;
+            case 2:
+                return formik.errors.idealRoutine;
+            case 3:
+                return formik.errors.averageRoutine;
+            case 4: 
+                return formik.errors.survivalRoutine;
             default:
-                return false
+                return false;
         }
     }
 
@@ -43,9 +61,9 @@ const NewRoutinePage = () => {
         initialValues: {
             name: '',
             tasks: [],
-            // idealRoutine: [],
-            // averageRoutine: [],
-            // survivalRoutine: []
+            idealRoutine: [],
+            averageRoutine: [],
+            survivalRoutine: []
         },
 
         validationSchema: Yup.object().shape({
@@ -54,15 +72,15 @@ const NewRoutinePage = () => {
             tasks: Yup.array()
             .required('Please add tasks to your routine.')
             .min(1, 'Please add more than one task to your routine'),
-            // idealRoutine: Yup.array()
-            // .required('Please select tasks to your ideal routine.')
-            // .min(1),
-            // averageRoutine: Yup.array()
-            // .required('Please select tasks to your average routine.')
-            // .min(1),
-            // survivalRoutine: Yup.array()
-            // .required('Please select tasks to your survival routine.')
-            // .min(1),
+            idealRoutine: Yup.array()
+            .required('Please select tasks to your ideal routine.')
+            .min(1),
+            averageRoutine: Yup.array()
+            .required('Please select tasks to your average routine.')
+            .min(1),
+            survivalRoutine: Yup.array()
+            .required('Please select tasks to your survival routine.')
+            .min(1),
         }),
 
         onSubmit: handleSubmit,
@@ -74,12 +92,12 @@ const NewRoutinePage = () => {
                 return <NameRoutine props={{formik: formik, handleSubmit: handleSubmit}} />
             case 1:
                 return <AddTasksToRoutine props={{formik: formik}} />
-            // case 2:
-            //     return <SelectRequireTasks formik={formik} />
-            // case 3:
-            //     return <SelectRequireTasks formik={formik} />
-            // case 4:
-            //     return <SelectRequireTasks formik={formik} />
+            case 2:
+                return <SelectRequiredTasks props={{formik: formik, text:idealText, id:0}} />
+            case 3:
+                return <SelectRequiredTasks props={{formik: formik, text:averageText, id:1}} />
+            case 4:
+                return <SelectRequiredTasks props={{formik: formik, text:survivalText, id:2}} />
             default:
                 return <div>404 not found</div>
         }

@@ -7,7 +7,7 @@ const NameRoutine = ({props}) => {
 
     useEffect(() => {
         formik.validateForm();
-    }, [])
+    },[])
 
     const handleKeyPress = (e) => {
         if(e.key === 'Enter')

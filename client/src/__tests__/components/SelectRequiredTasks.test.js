@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import {expect, test} from '@jest/globals';
 import React from "react";
-import AddTasksToRoutine from "../../components/AddTasksToRoutine";
+import SelectRequiredTasks from "../../components/SelectRequiredTasks";
 
 const mockFormik = {
     values: {
@@ -13,18 +13,27 @@ const mockFormik = {
     },
     errors: {},
     touched: {},
+    validateForm: jest.fn(),
+    setFieldValue: jest.fn(),
     handleChange: jest.fn(),
     handleSubmit: jest.fn(),
 };
 
+const textMock = {
+    title: '',
+    prompt: ''
+}
+
 const testProps = {
     formik: mockFormik,
-    
+    list: [],
+    text: textMock,
+    id: 0
 };
 
-describe(AddTasksToRoutine.name, ()=>{
-    test('AddTasksToRoutine matches snapshot', () => {
-        const {container} = render(<AddTasksToRoutine props={testProps}/>);
+describe(SelectRequiredTasks.name, ()=>{
+    test('SelectRequiredTasks matches snapshot', () => {
+        const {container} = render(<SelectRequiredTasks props={testProps}/>);
         expect(container.firstChild).toMatchSnapshot();
     });
 });
