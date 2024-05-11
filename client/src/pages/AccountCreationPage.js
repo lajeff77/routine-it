@@ -1,6 +1,6 @@
 import React from 'react';
 import CreateAccountForm from '../components/CreateAccountForm';
-import Footer from '../components/Footer';
+import Footer from '../components/LandingPage/Footer';
 
 const AccountCreationPage = () => {
 

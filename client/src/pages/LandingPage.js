@@ -1,8 +1,8 @@
 import React from 'react';
-import MainHeader from '../components/MainHeader';
-import HeroSection from '../components/HeroSection';
-import SummarySection from '../components/SummarySection';
-import Footer from '../components/Footer';
+import MainHeader from '../components/LandingPage/MainHeader';
+import HeroSection from '../components/LandingPage/HeroSection';
+import SummarySection from '../components/LandingPage/SummarySection';
+import Footer from '../components/LandingPage/Footer';
 
 const LandingPage = () => {
 
