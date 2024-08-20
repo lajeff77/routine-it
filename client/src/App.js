@@ -9,6 +9,7 @@ import AccountCreationPage from './pages/AccountCreationPage'
 import SignInPage from './pages/SignInPage'
 import MyDashboardPage from './pages/MyDashboardPage';
 import NewRoutinePage from './pages/NewRoutinePage';
+import RoutineChecklistPage from './pages/RoutineChecklistPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route element={<SignInPage />} path="/signin" />
           <Route element={<MyDashboardPage />} path="/mydashboard" />
           <Route element={<NewRoutinePage />} path="/newroutine" />
+          <Route element={<RoutineChecklistPage/>} path="/routinechecklist" />
         </Routes>
       </Router>
     </div>
