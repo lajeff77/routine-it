@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import axios from "axios";
 import {Box, Checkbox, FormGroup, FormControlLabel, FormControl, FormLabel, Typography} from "@mui/material";
 
 const RoutineCheckList = (props) => {
@@ -10,11 +11,30 @@ const RoutineCheckList = (props) => {
         return initialCheckedState;
     });
 
+    const putData = async(task) =>{
+        try{
+            const response = await axios.put(`http://localhost:8080/api/v1/tasks/${task.id}`, task);
+        }catch(error){
+            console.log(`An error occurred while updating the routine: ${error}`);
+        }
+    }
+
+
     const handleChange = (event) =>
     {
         console.log(`Set ${event.target.name} = ${event.target.checked}`);
         setChecked({...checked, [event.target.name]: event.target.checked});
-        //make api call here
+
+        //update in api here
+        props.tasks.forEach(task => {
+            if(task.name === event.target.name)
+                {
+                    task.complete = event.target.checked;
+                    putData(task)
+                }
+        })
+        
+    
     }
 
     return(

@@ -2,11 +2,11 @@ import React from 'react';
 import DashboardHeader from './DashboardHeader';
 import RoutineList from './RoutineList';
 
-const Dashboard = () => {
+const Dashboard = (props) => {
     return (
         <div>
             <DashboardHeader />
-            <RoutineList />
+            <RoutineList routineList={props.routineList} />
         </div>
     )
 }
