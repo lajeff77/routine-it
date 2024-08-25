@@ -6,6 +6,7 @@ import Routine from './Routine';
 
 const RoutineList = (props) => {
     const [tasks, setTasks] = useState([]);
+    const [progress, setProgress] = useState("0");
     const navigate = useNavigate();
 
     const newRoutine = () =>{
@@ -24,7 +25,7 @@ const RoutineList = (props) => {
 
     const calculateRoutineProgress = (routineId, mode) =>{
         //parse routine with level to see how many 
-        // TODO call tasks api here
+        // TODO fix broken progress bar
         getTasks(routineId);
         //sort tasks
         let totalTasks = 0;
