@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {Box, Checkbox, FormGroup, FormControlLabel, FormControl, FormLabel, Typography} from "@mui/material";
 
 const RoutineCheckList = (props) => {
     const [checked, setChecked] = useState(() => {
         const initialCheckedState = {};
-        Array.from(props.tasks).forEach(task => {
+        props.tasks.forEach(task => {
             initialCheckedState[task.name] = task.complete;
         });
         return initialCheckedState;
@@ -23,7 +23,7 @@ const RoutineCheckList = (props) => {
             <FormControl component="fieldset">
                 <FormLabel component="legend">Tasks</FormLabel>
                 <FormGroup>
-                    {Array.from(props.tasks).map((task) => (
+                    {props.tasks.map((task) => (
                         <FormControlLabel
                             key={task.id}
                             control={<Checkbox checked={checked[task.name]} onChange={handleChange} name={task.name} />}

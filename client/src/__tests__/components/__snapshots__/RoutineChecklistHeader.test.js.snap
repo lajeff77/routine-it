@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoutineChecklistHeader RoutineChecklistHeader matches snapshot 1`] = `
+<div
+  class="MuiBox-root css-0"
+>
+  <h1
+    class="MuiTypography-root MuiTypography-h1 css-3ns5jg-MuiTypography-root"
+  >
+    Test Routine
+  </h1>
+</div>
+`;

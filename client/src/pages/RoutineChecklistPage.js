@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {Box, Typography} from "@mui/material";
 import RoutineChecklistHeader from "../components/RoutineCheckListPage/RoutineChecklistHeader";
-import RoutineCheckList from "../components/RoutineCheckListPage/RoutineCheckListGroup";
+import RoutineCheckListGroup from "../components/RoutineCheckListPage/RoutineCheckListGroup";
 
 const RoutineChecklistPage = () => { 
 
@@ -21,7 +21,6 @@ const RoutineChecklistPage = () => {
                 const response = await axios.get('http://localhost:8080/api/v1/routines/1')
             
                 // handle success
-                // console.log(response);
                 setRoutine(response.data);
                 setRoutineId(response.data.id);
 
@@ -29,7 +28,6 @@ const RoutineChecklistPage = () => {
                 const taskResponse = await axios.get(`http://localhost:8080/api/v1/tasks/${response.data.id}`);
          
                 //sort tasks
-                // console.log(taskResponse); 
                 var taskResp = taskResponse.data;
                 for(let i = 0; i < taskResp.length; i++)
                 {
@@ -59,7 +57,7 @@ const RoutineChecklistPage = () => {
     return(
         <Box>
             <RoutineChecklistHeader name={routine.name || "Loading..."}/>
-            { loaded ? <RoutineCheckList routineId={routineId} highEffortTasks={filterUniqueTasks(highEffortTasks)} medEffortTasks={filterUniqueTasks(medEffortTasks)} lowEffortTasks={filterUniqueTasks(lowEffortTasks)}/> : <Box><Typography variant="h2" sx={{textAlign: "center"}}>Loading...</Typography></Box> }
+            { loaded ? <RoutineCheckListGroup routineId={routineId} highEffortTasks={filterUniqueTasks(highEffortTasks)} medEffortTasks={filterUniqueTasks(medEffortTasks)} lowEffortTasks={filterUniqueTasks(lowEffortTasks)}/> : <Box><Typography variant="h2" sx={{textAlign: "center"}}>Loading...</Typography></Box> }
         </Box>
     )
 }
