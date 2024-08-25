@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import {expect, test} from '@jest/globals';
 import React from "react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import Routine from "../../components/Routine";
+import Routine from "../../components/DashboardPage/Routine";
 
 
 describe(Routine.name, ()=>{

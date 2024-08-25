@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import {expect, test} from '@jest/globals';
 import React from "react";
-import Dashboard from "../../components/Dashboard";
+import Dashboard from "../../components/DashboardPage/Dashboard";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 
 

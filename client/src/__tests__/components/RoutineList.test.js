@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import {expect, test} from '@jest/globals';
 import React from "react";
-import RoutineList from "../../components/RoutineList";
+import RoutineList from "../../components/DashboardPage/RoutineList";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 
 

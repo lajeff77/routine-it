@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import {expect, test} from '@jest/globals';
 import React from "react";
-import NameRoutine from "../../components/NameRoutine";
+import NameRoutine from "../../components/NewRoutinePage/NameRoutine";
 
 const mockFormik = {
     values: {

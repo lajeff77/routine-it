@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import Footer from "../../components/LandingPage/Footer";
+import Footer from "../../components/Common/Footer";
 
 describe(Footer.name, ()=>{
     test('Footer matches snapshot', () => {

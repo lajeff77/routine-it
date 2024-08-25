@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import {expect, test} from '@jest/globals';
 import React from "react";
-import DashboardHeader from "../../components/DashboardHeader";
+import DashboardHeader from "../../components/DashboardPage/DashboardHeader";
 
 
 describe(DashboardHeader.name, ()=>{

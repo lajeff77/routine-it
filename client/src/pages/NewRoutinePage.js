@@ -3,9 +3,9 @@ import {useNavigate} from 'react-router-dom';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import {Box, Stepper, Step, StepLabel, Grid, FormHelperText, Button} from '@mui/material';
-import NameRoutine from '../components/NameRoutine';
-import AddTasksToRoutine from '../components/AddTasksToRoutine';
-import SelectRequiredTasks from '../components/SelectRequiredTasks';
+import NameRoutine from '../components/NewRoutinePage/NameRoutine';
+import AddTasksToRoutine from '../components/NewRoutinePage/AddTasksToRoutine';
+import SelectRequiredTasks from '../components/NewRoutinePage/SelectRequiredTasks';
 
 const steps = [ 'Name Routine', 'Add Tasks', 'Configure Ideal Routine', 'Configure Average Routine', 'Configure Survival Routine']
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import SignInForm from '../components/SignInForm';
-import Footer from '../components/LandingPage/Footer';
+import SignInForm from '../components/SignInPage/SignInForm';
+import Footer from '../components/Common/Footer';
 
 const SignInPage = () => {
 

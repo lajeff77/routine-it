@@ -2,7 +2,7 @@ import React from 'react';
 import MainHeader from '../components/LandingPage/MainHeader';
 import HeroSection from '../components/LandingPage/HeroSection';
 import SummarySection from '../components/LandingPage/SummarySection';
-import Footer from '../components/LandingPage/Footer';
+import Footer from '../components/Common/Footer';
 
 const LandingPage = () => {
 

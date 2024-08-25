@@ -1,6 +1,6 @@
 import React from "react";
-import Dashboard from "../components/Dashboard";
-import PermanentSideDrawer from "../components/PermanentSideDrawer";
+import Dashboard from "../components/DashboardPage/Dashboard";
+import PermanentSideDrawer from "../components/DashboardPage/PermanentSideDrawer";
 import {Grid} from '@mui/material';
 
 const MyDashboardPage = () => {

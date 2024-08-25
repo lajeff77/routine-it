@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import {expect, test} from '@jest/globals';
 import React from "react";
-import PermanentSideDrawer from "../../components/PermanentSideDrawer";
+import PermanentSideDrawer from "../../components/DashboardPage/PermanentSideDrawer";
 
 
 describe(PermanentSideDrawer.name, ()=>{
