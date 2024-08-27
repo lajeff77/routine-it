@@ -2,7 +2,8 @@ import React , {useEffect, useState} from "react";
 import axios from "axios";
 import Dashboard from "../components/DashboardPage/Dashboard";
 import PermanentSideDrawer from "../components/DashboardPage/PermanentSideDrawer";
-import {Grid, Box, Typography} from '@mui/material';
+import {Grid} from '@mui/material';
+import Loading from "../components/Common/Loading";
 
 const MyDashboardPage = () => {
     const [routineList, setRoutineList] = useState([]);
@@ -29,7 +30,7 @@ const MyDashboardPage = () => {
         <div>
             <Grid container rowSpacing={2} >
                 <Grid item xs={2}><PermanentSideDrawer /></Grid>
-                {loaded? <Grid item xs={10}><Dashboard routineList={routineList} /></Grid> : <Box><Typography variant="h2" sx={{textAlign: "center"}}>Loading...</Typography></Box> }
+                {loaded? <Grid item xs={10}><Dashboard routineList={routineList} /></Grid> : <Loading/> }
             </Grid>
         </div>
     )
