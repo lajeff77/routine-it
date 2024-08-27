@@ -1,62 +1,13 @@
-import React, {useState} from 'react';
-import axios from 'axios';
+import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import {Box, Button,Divider, List, Typography} from '@mui/material';
 import Routine from './Routine';
 
 const RoutineList = (props) => {
-    const [tasks, setTasks] = useState([]);
-    const [progress, setProgress] = useState("0");
     const navigate = useNavigate();
 
     const newRoutine = () =>{
         navigate("/newroutine");
-    }
-
-    const getTasks = async (routineId) => {
-        try{
-            const response = await axios.get(`http://localhost:8080/api/v1/tasks/${routineId}`);
-            setTasks(response.data)
-        
-        }catch(error){
-            console.log(`an error occurred while fetching the tasks to calculate the percentage: ${error}`)
-        }
-    }
-
-    const calculateRoutineProgress = (routineId, mode) =>{
-        //parse routine with level to see how many 
-        // TODO fix broken progress bar
-        getTasks(routineId);
-        //sort tasks
-        let totalTasks = 0;
-        let completedTasks = 0;
-        for(let i = 0; i < tasks.length; i++)
-        {
-            if(tasks[i].highEffort && mode === "HIGH")
-            {
-                totalTasks++;
-                if(tasks[i].complete)
-                    completedTasks++;
-            }
-                
-            if(tasks[i].mediumEffort && mode === "MEDIUM")
-            {
-                totalTasks++;
-                if(tasks[i].complete)
-                    completedTasks++;
-            }
-                
-            if(tasks[i].lowEffort && mode === "LOW")
-            {
-                totalTasks++;
-                if(tasks[i].complete)
-                    completedTasks++;
-            }
-                
-        }
-        let percent = (totalTasks/completedTasks) *100;
-        console.log(`percent is ${percent}`);
-        return percent.toString();
     }
 
     return(
@@ -65,7 +16,7 @@ const RoutineList = (props) => {
             <List>
             {props.routineList.map((routine) => (
                         <Box>
-                            <Routine name={routine.name} routine={routine} id={routine.id} progress={() => calculateRoutineProgress(routine.id, routine.mode)} mode={routine.mode}/>
+                            <Routine name={routine.name} routine={routine} id={routine.id} mode={routine.mode}/>
                             <Divider/>
                         </Box>
                     ))}

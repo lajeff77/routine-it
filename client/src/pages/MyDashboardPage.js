@@ -16,7 +16,6 @@ const MyDashboardPage = () => {
                 //handle success
                 await setRoutineList(response.data);
                 setLoaded(true);
-                console.log(`routineList is ${routineList}`);
             }
             catch(error){
                 console.error('Error fetching routines:', error);
