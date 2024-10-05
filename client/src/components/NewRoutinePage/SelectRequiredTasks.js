@@ -14,13 +14,13 @@ const SelectRequiredTasks = ({props}) => {
     useEffect(() => {
         switch(props.id){
             case 0:
-                formik.setFieldValue("idealRoutine", checkedItems);
+                formik.setFieldValue("lowEffortRoutine", checkedItems);
                 break;
             case 1:
-                formik.setFieldValue("averageRoutine", checkedItems);                
+                formik.setFieldValue("medEffortRoutine", checkedItems);                
                 break;
             case 2:
-                formik.setFieldValue("survivalRoutine", checkedItems);
+                formik.setFieldValue("highEffortRoutine", checkedItems);
                 break;
             default:
                 //do nothing

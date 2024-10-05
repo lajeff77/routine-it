@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
@@ -7,19 +8,19 @@ import NameRoutine from '../components/NewRoutinePage/NameRoutine';
 import AddTasksToRoutine from '../components/NewRoutinePage/AddTasksToRoutine';
 import SelectRequiredTasks from '../components/NewRoutinePage/SelectRequiredTasks';
 
-const steps = [ 'Name Routine', 'Add Tasks', 'Configure Ideal Routine', 'Configure Average Routine', 'Configure Survival Routine']
+const steps = [ 'Name Routine', 'Add Tasks', 'Configure High Effort Routine', 'Configure Medium Effort Routine', 'Configure Low Effort Routine']
 
-const idealText = {
+const highEffortText = {
     title: "What tasks can you see yourself doing on an ideal day?",
-    prompt: "Select the tasks that you hope to achieve on your best days.",
+    prompt: "Select the tasks that you hope to achieve on your best days. These tasks will make up your high effort routine.",
 }
-const averageText = {
+const medEffortText = {
     title: "What tasks can you see yourself doing on an average day?",
-    prompt: "Select the tasks that you hope to achieve on most days.",
+    prompt: "Select the tasks that you hope to achieve on most days. These tasks will make up your medium effort routine.",
 }
-const survivalText = {
+const lowEffortText = {
     title: "What tasks do you need to do in order to survive?",
-    prompt: "Please only select the tasks that you expect yourself to do at the bare minimum.",
+    prompt: "Please only select the tasks that you expect yourself to do at the bare minimum. These tasks will make up your low effort routine.",
 }
 
 const NewRoutinePage = () => {
@@ -32,7 +33,7 @@ const NewRoutinePage = () => {
 
     const handleSubmit = () => {
         if(activeStep === steps.length - 1){
-            //TODO: call api to create new routine here
+            createRoutine();
             // console.log(`name is ${formik.values.name} \n tasks is ${formik.values.tasks}\n idealRoutine is ${formik.values.idealRoutine}\n averageRoutine is ${formik.values.averageRoutine}\n survivalRoutine is ${formik.values.survivalRoutine}`)
             navigate("/myDashboard");
         }else{
@@ -47,23 +48,28 @@ const NewRoutinePage = () => {
             case 1:
                 return formik.errors.tasks;
             case 2:
-                return formik.errors.idealRoutine;
+                return formik.errors.lowEffortRoutine;
             case 3:
-                return formik.errors.averageRoutine;
+                return formik.errors.medEffortRoutine;
             case 4: 
-                return formik.errors.survivalRoutine;
+                return formik.errors.highEffortRoutine;
             default:
                 return false;
         }
+    }
+    
+    const createRoutine = () =>{
+        console.log('create routine');
+        axios.post('http://localhost:8080/api/v1/routines', {name: formik.values.name});
     }
 
     const formik = useFormik({
         initialValues: {
             name: '',
             tasks: [],
-            idealRoutine: [],
-            averageRoutine: [],
-            survivalRoutine: []
+            highEffortRoutine: [],
+            medEffortRoutine: [],
+            lowEffortRoutine: []
         },
 
         validationSchema: Yup.object().shape({
@@ -73,13 +79,13 @@ const NewRoutinePage = () => {
             .required('Please add tasks to your routine.')
             .min(1, 'Please add more than one task to your routine'),
             idealRoutine: Yup.array()
-            .required('Please select tasks to your ideal routine.')
+            .required('Please select tasks for your high effort routine.')
             .min(1),
             averageRoutine: Yup.array()
-            .required('Please select tasks to your average routine.')
+            .required('Please select tasks for your medium effort routine.')
             .min(1),
             survivalRoutine: Yup.array()
-            .required('Please select tasks to your survival routine.')
+            .required('Please select tasks for your low effort routine.')
             .min(1),
         }),
 
@@ -93,11 +99,11 @@ const NewRoutinePage = () => {
             case 1:
                 return <AddTasksToRoutine props={{formik: formik}} />
             case 2:
-                return <SelectRequiredTasks props={{formik: formik, text:idealText, id:0}} />
+                return <SelectRequiredTasks props={{formik: formik, text:highEffortText, id:0}} />
             case 3:
-                return <SelectRequiredTasks props={{formik: formik, text:averageText, id:1}} />
+                return <SelectRequiredTasks props={{formik: formik, text:medEffortText, id:1}} />
             case 4:
-                return <SelectRequiredTasks props={{formik: formik, text:survivalText, id:2}} />
+                return <SelectRequiredTasks props={{formik: formik, text:lowEffortText, id:2}} />
             default:
                 return <div>404 not found</div>
         }
