@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import {Box, Button, LinearProgress, ListItem, Typography} from '@mui/material';
+import {Box, Button, LinearProgress, ListItem, Typography, IconButton, Menu, MenuItem} from '@mui/material';
 import {useNavigate} from 'react-router-dom';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const Routine = (props) =>{
     const [mode,setMode] = useState("");
     const [tasks, setTasks] = useState([]);
     const [progress, setProgress] = useState(0);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
 
     const navigate = useNavigate();
 
@@ -95,6 +100,15 @@ const Routine = (props) =>{
         navigate("/routinechecklist",{state: {id: props.id}});
     }
 
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const handleMenuClick = (event) => {
+        console.log("menu click handled");
+        setAnchorEl(event.currentTarget);
+    }
+
     return(
         <ListItem sx={{margin:"10px", display:"flex", justifyContent:"space-around"}}>
             <Typography sx={{width:"150px"}}>{props.name}</Typography>
@@ -109,6 +123,25 @@ const Routine = (props) =>{
             </Box>
           
             <Button type="button" variant="outlined" sx={{margin:"5px", width:"200px"}} onClick={() => {navigateToRoutineChecklist()}}>{determineLabel()}</Button>
+            <IconButton
+                aria-controls="basic-menu"
+                aria-haspopup="true"
+                onClick={handleMenuClick}
+                aria-label="Routine options"
+                title="Routine options"
+            >
+              <MoreVertIcon sx={{margin:"5px"}}/>  
+            </IconButton>
+            <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{'aria-labelledby': 'basic-button',}}
+            >
+                <MenuItem onClick={handleClose}><EditIcon/> Edit</MenuItem>
+                <MenuItem onClick={handleClose}><DeleteIcon/> Delete</MenuItem>
+            </Menu>
         </ListItem>
     );
 };
