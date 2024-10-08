@@ -100,12 +100,33 @@ const Routine = (props) =>{
         navigate("/routinechecklist",{state: {id: props.id}});
     }
 
-    const handleClose = () => {
+    const handleClose = (menuOption) => {
         setAnchorEl(null);
+        switch(menuOption){
+            case 'edit':
+                console.log("edit");
+                break;
+            case 'delete':
+                deleteRoutine();
+                break;
+            default:
+                console.log("default");
+                break;
+        }
+
     };
 
+    const deleteRoutine = async () => {
+        try{
+            const response = await axios.delete(`http://localhost:8080/api/v1/routine/${props.id}`);
+        
+        }catch(error){
+            console.log(`an error occurred while deleting the routine: ${error}`)
+        }
+        
+    }
+
     const handleMenuClick = (event) => {
-        console.log("menu click handled");
         setAnchorEl(event.currentTarget);
     }
 
@@ -139,8 +160,8 @@ const Routine = (props) =>{
                 onClose={handleClose}
                 MenuListProps={{'aria-labelledby': 'basic-button',}}
             >
-                <MenuItem onClick={handleClose}><EditIcon/> Edit</MenuItem>
-                <MenuItem onClick={handleClose}><DeleteIcon/> Delete</MenuItem>
+                <MenuItem onClick={() => handleClose('edit')}><EditIcon/> Edit</MenuItem>
+                <MenuItem onClick={() => handleClose('delete')}><DeleteIcon/> Delete</MenuItem>
             </Menu>
         </ListItem>
     );
