@@ -1,8 +1,10 @@
-import React, {useState} from "react";
-import axios from "axios";
+import React, {useState, useEffect} from "react";
+import axios, { all } from "axios";
 import {Box, Checkbox, FormGroup, FormControlLabel, FormControl, FormLabel, Typography} from "@mui/material";
+import JSConfetti from 'js-confetti'
 
 const RoutineCheckList = (props) => {
+    const jsConfetti = new JSConfetti();
     const [checked, setChecked] = useState(() => {
         const initialCheckedState = {};
         props.tasks.forEach(task => {
@@ -19,21 +21,34 @@ const RoutineCheckList = (props) => {
         }
     }
 
+    const triggerConfetti = () => {
+        jsConfetti.addConfetti({
+            confettiColors: [
+              '#457B3B', '#DD742D', '#C23F38', '#3874CB',
+            ],
+          });
+    }
 
-    const handleChange = (event) =>
+
+    const handleChange = async (event) =>
     {
         console.log(`Set ${event.target.name} = ${event.target.checked}`);
         setChecked({...checked, [event.target.name]: event.target.checked});
 
+        let count = 0;
         //update in api here
         props.tasks.forEach(task => {
             if(task.name === event.target.name)
-                {
-                    task.complete = event.target.checked;
-                    putData(task)
-                }
+            {
+                task.complete = event.target.checked;
+                putData(task)
+            }
+            if(task.complete)
+                count++;
         })
-        
+     
+        if(count === props.tasks.length) 
+            triggerConfetti();
     
     }
 
